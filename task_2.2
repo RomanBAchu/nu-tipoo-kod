@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS Artist (
 
 -- Соединительный блок Жанр + Артист
 CREATE TABLE IF NOT EXISTS Genre_Artist (
-    id_genre int REFERENCES Genre(id_genre),
-    id_artist int REFERENCES Artist(id_artist),
+    id_genre INTEGER REFERENCES Genre(id_genre),
+    id_artist INT REFERENCES Artist(id_artist),
     CONSTRAINT pkey0 PRIMARY KEY (id_genre, id_artist)
 );
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS Track (
     id_track SERIAL PRIMARY KEY,
     id_album INT REFERENCES Album(id_album),
     track_name VARCHAR (60) NOT NULL,
-    duracion REAL NOT NULL    
+    duracion TIME NOT NULL    
 );
 
 -- Блок Сборник
